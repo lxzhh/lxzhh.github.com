@@ -10,22 +10,19 @@ categories: [IOS, 工作, SDK]
 >支蜡烛耐烧，然而烧不出好的作品，根本没意义。
 									
 
-顺便推荐一下我们公司的论坛 [火龙果社区](http://www.huolonger.com)
+公司的论坛 [火龙果社区](http://www.huolonger.com)
 
-测试一下 `IOS SDK`
+顺便测试一下 `IOS 代码`
 	
 {% codeblock lang:objc %}
-double delayInSeconds = 0.5;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                //[JCPopoverController setUserInteraction:NO];
-                TweetComposeViewController *tweetComposeViewController = [[TweetComposeViewController alloc] init];
-                tweetComposeViewController.completionHandler = completionHandler;
-                UINavigationController *tweetNavigationController = [[UINavigationController alloc] initWithRootViewController:tweetComposeViewController];
-                [self presentModalViewController:tweetNavigationController animated:YES];
-                [tweetComposeViewController release];
-                [tweetNavigationController release];
-            });
+__block NSString *stringValue;
+dispatch_sync(dispatch_get_main_queue(), ^{
+        // __block variables aren't automatically retained
+        // so we'd better make sure we have a reference we can keep
+        stringValue = [[textField stringValue] copy];
+});
+[stringValue autorelease];
+// use stringValue in the background now
 {% endcodeblock %}
 
 
