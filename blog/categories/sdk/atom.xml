@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SDK | RedHat894's Blog]]></title>
+  <link href="http://lxzhh.github.com/blog/categories/sdk/atom.xml" rel="self"/>
+  <link href="http://lxzhh.github.com/"/>
+  <updated>2013-07-29T16:56:55+08:00</updated>
+  <id>http://lxzhh.github.com/</id>
+  <author>
+    <name><![CDATA[RedHat894]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[我写的不够动人，你别皱眉]]></title>
+    <link href="http://lxzhh.github.com/blog/2012/12/10/wo-xie-de-bu-gou-dong-ren-%2Cni-bie-zhou-mei/"/>
+    <updated>2012-12-10T14:05:00+08:00</updated>
+    <id>http://lxzhh.github.com/blog/2012/12/10/wo-xie-de-bu-gou-dong-ren-,ni-bie-zhou-mei</id>
+    <content type="html"><![CDATA[<blockquote><p>支蜡烛耐烧，然而烧不出好的作品，根本没意义。</p></blockquote>
+
+<p>公司的论坛 <a href="http://www.huolonger.com">火龙果社区</a></p>
+
+<p>顺便测试一下 <code>IOS 代码</code></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">__block</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">stringValue</span><span class="p">;</span>
+</span><span class='line'><span class="n">dispatch_sync</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="c1">// __block variables aren&#39;t automatically retained</span>
+</span><span class='line'>    <span class="c1">// so we&#39;d better make sure we have a reference we can keep</span>
+</span><span class='line'>    <span class="n">stringValue</span> <span class="o">=</span> <span class="p">[[</span><span class="n">textField</span> <span class="n">stringValue</span><span class="p">]</span> <span class="n">copy</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span><span class='line'><span class="p">[</span><span class="n">stringValue</span> <span class="n">autorelease</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// use stringValue in the background now</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>
